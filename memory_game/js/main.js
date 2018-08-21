@@ -55,6 +55,18 @@ var createBoard = function() {
 	}
 }
 
+var resetBoard = function() {
+	var cardElementList = document.getElementById('game-board').childNodes;
+	
+	for (var i = 0; i < cardElementList.length; i++) {
+		cardElementList[i].setAttribute('src', 'images/back.png');
+	}
+
+	cardsInPlay = [];	
+}
+
+document.getElementsByTagName('button')[0].addEventListener('click', resetBoard);
+
 createBoard();
 
 
